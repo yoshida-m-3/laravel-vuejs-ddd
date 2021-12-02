@@ -4,3 +4,5 @@ services:
   php:
     build:
       context: ./docker/php
+    volumes:
+      - ./laravel:/var/www/laravel

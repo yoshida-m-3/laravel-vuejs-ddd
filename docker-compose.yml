@@ -6,3 +6,17 @@ services:
       context: ./docker/php
     volumes:
       - ./laravel:/var/www/laravel
+
+  db:
+    image: mysql:8.0
+    platform: linux/x86_64 # M1チップ対応
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: develop
+      TZ: "Asia/Tokyo"
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf:cached
+      - ./docker/db/initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306

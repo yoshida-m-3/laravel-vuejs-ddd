@@ -7,6 +7,11 @@ WORKDIR /var/www/laravel
 RUN apt update \
     && apt install -y p7zip-full
 
+# install php extension
+# Supported PHP Extension List
+# https://github.com/mlocati/docker-php-extension-installer
+RUN docker-php-ext-install pdo_mysql
+
 # install composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER 1

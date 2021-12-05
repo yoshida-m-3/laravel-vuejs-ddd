@@ -7,7 +7,12 @@
     "service": "php",
     "workspaceFolder": "/workspace/laravel",
     "shutdownAction": "none",
-    "settings": {},
+    "settings": {
+        "editor.formatOnSave": true,
+        "php-cs-fixer.executablePath": "/workspace/laravel/vendor/bin/php-cs-fixer",
+        "php-cs-fixer.onsave": true,
+        "php-cs-fixer.config": ".php-cs-fixer.dist.php",
+    },
     "extensions": [
         "bmewburn.vscode-intelephense-client",
         "felixfbecker.php-debug",
@@ -15,5 +20,6 @@
         "mikestead.dotenv",
         "neilbrayfield.php-docblocker",
         "recca0120.vscode-phpunit",
+        "junstyle.php-cs-fixer",
     ]
 }

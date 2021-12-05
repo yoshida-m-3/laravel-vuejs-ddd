@@ -6,6 +6,8 @@ services:
       context: ./docker/php
     volumes:
       - ./laravel:/var/www/laravel
+    environment:
+      - PHP_CS_FIXER_IGNORE_ENV=1
 
   db:
     image: mysql:8.0

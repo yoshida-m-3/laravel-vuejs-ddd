@@ -5,7 +5,8 @@ WORKDIR /var/www/laravel
 
 # install app
 RUN apt update \
-    && apt install -y p7zip-full
+    && apt install -y p7zip-full \
+    git
 
 # install php extension
 # Supported PHP Extension List

@@ -8,8 +8,6 @@ class CreateOrderDetails extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
@@ -17,7 +15,8 @@ class CreateOrderDetails extends Migration
             $table->id();
             $table->foreignId('order_id')
                 ->constrained()
-                ->onDelete('cascade');
+                ->onDelete('cascade')
+            ;
             $table->string('item_name');
             $table->unsignedInteger('quantity');
             $table->unsignedInteger('unit_price');
@@ -27,8 +26,6 @@ class CreateOrderDetails extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

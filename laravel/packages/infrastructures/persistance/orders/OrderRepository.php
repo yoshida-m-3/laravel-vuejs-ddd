@@ -8,9 +8,9 @@ use Packages\Domains\Orders\Order;
 
 class OrderRepository
 {
-    public function find(int $orderId): Order
+    public function find(int $orderId): ?Order
     {
-        return OrderModel::find($orderId)->toEntity();
+        return OrderModel::find($orderId)?->toEntity();
     }
 
     /**

@@ -4,6 +4,7 @@ namespace Packages\Domains\Orders;
 
 use App\Models\OrderModel;
 use Carbon\Carbon;
+use InvalidArgumentException;
 use Packages\Domains\Interfaces\AgregateRoot;
 use Packages\Domains\Interfaces\Entity;
 
@@ -14,6 +15,9 @@ class Order implements Entity, AgregateRoot
         public readonly string $orderNumber,
         public readonly Carbon $orderDatetime,
     ) {
+        if (strlen($orderNumber) > 10) {
+            throw new InvalidArgumentException('注文番号は10文字以内で入力して下さい。');
+        }
     }
 
     public static function create(string $orderNumber): Order

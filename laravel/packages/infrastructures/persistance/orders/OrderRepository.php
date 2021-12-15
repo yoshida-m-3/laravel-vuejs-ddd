@@ -28,11 +28,13 @@ class OrderRepository
      */
     public function insert(Order $order): int
     {
-        return $order->toModel()->create()->id;
+        $orderModel = $order->toModel();
+
+        return $orderModel->create($orderModel->getAttributes())->id;
     }
 
     /**
-     * @return boolean 更新成功:true / 失敗:false
+     * @return bool 更新成功:true / 失敗:false
      */
     public function update(Order $order): bool
     {

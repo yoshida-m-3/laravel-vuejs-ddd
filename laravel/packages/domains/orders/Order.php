@@ -43,7 +43,7 @@ class Order implements Entity, AgregateRoot
         return new OrderModel([
             'id' => $this->id,
             'order_number' => $this->orderNumber,
-            'order_datetime' => $this->order_datetime,
+            'order_datetime' => $this->orderDatetime,
         ]);
     }
 }

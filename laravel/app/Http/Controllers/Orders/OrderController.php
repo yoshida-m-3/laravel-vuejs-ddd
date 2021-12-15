@@ -21,9 +21,9 @@ class OrderController extends Controller
         $order = $useCase->find($data['orderId']);
 
         return response()->json([
-            'id' => $order?->id,
-            'orderNumber' => $order?->orderNumber,
-            'orderDatetime' => $order?->orderDatetime,
+            'id' => $order->id,
+            'orderNumber' => $order->orderNumber,
+            'orderDatetime' => $order->orderDatetime,
         ]);
     }
 

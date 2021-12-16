@@ -9,6 +9,13 @@ services:
     environment:
       - PHP_CS_FIXER_IGNORE_ENV=1
 
+  node:
+    build:
+      context: ./docker/node
+    volumes:
+      - ./vue:/projects
+    tty: true
+
   db:
     image: mysql:8.0
     platform: linux/x86_64 # M1チップ対応

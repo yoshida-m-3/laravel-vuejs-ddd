@@ -1,0 +1,12 @@
+{
+  "name": "node",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "../.devcontainer/docker-compose.yml"
+  ],
+  "service": "node",
+  "workspaceFolder": "/projects",
+  "shutdownAction": "none",
+  "settings": {},
+  "extensions": []
+}

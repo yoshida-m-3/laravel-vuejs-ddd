@@ -7,6 +7,26 @@
   "service": "node",
   "workspaceFolder": "/projects",
   "shutdownAction": "none",
-  "settings": {},
-  "extensions": []
+  "settings": {
+    "editor.formatOnSave": true,
+    "[vue]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+  },
+  "extensions": [
+    "christian-kohler.path-intellisense",
+    "dariofuzinato.vue-peek",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "hollowtree.vue-snippets",
+    "johnsoncodehk.volar",
+    "msjsdiag.debugger-for-chrome",
+  ]
 }

@@ -1,13 +1,14 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <h2>新規追加</h2>
+  <OrderCreate />
+  <h2>参照</h2>
+  <OrderShow :orderId="1" />
 </template>
+
+<script setup lang="ts">
+import OrderCreate from "./views/orders/create/OrderCreate.vue";
+import OrderShow from "./views/orders/show/OrderShow.vue";
+</script>
 
 <style>
 #app {
